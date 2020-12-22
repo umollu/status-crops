@@ -1,0 +1,18 @@
+{
+  "item.statuscrops.fruit" : "Status Fruit",
+  "item.statuscrops.fruit.0" : "Speed Status Fruit",
+  "item.statuscrops.fruit.1" : "Mining Status Fruit",
+  "item.statuscrops.fruit.2" : "Strength Status Fruit",
+  "item.statuscrops.fruit.3" : "Jump Status Fruit",
+  "item.statuscrops.fruit.4" : "Night Vision Status Fruit",
+  "item.statuscrops.seeds" : "Status Seeds",
+  "item.statuscrops.seeds.0" : "Speed Status Seeds",
+  "item.statuscrops.seeds.1" : "Mining Status Seeds",
+  "item.statuscrops.seeds.2" : "Strength Status Seeds",
+  "item.statuscrops.seeds.3" : "Jump Status Seeds",
+  "item.statuscrops.seeds.4" : "Night Vision Status Seeds",
+  "text.autoconfig.statuscrops.title" : "Status Crops Config",
+  "text.autoconfig.statuscrops.option.seedsDropChance" : "Seeds Drop Chance [0.0-1.0]",
+  "text.autoconfig.statuscrops.option.statsChangeChance" : "Stats Change Chance [0.0-1.0]",
+  "text.autoconfig.statuscrops.option.geneticCrossChance" : "Genetic Cross Chance [0.0-1.0]"
+}

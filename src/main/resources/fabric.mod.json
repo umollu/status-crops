@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "statuscrops",
+  "version": "${version}",
+  "name": "Status Crops",
+  "description": "Farm status effects crops",
+  "authors": [
+    "umollu"
+  ],
+  "contact": {
+    "homepage": "https://umollu.com/",
+    "sources": "https://github.com/umollu/status-crops",
+    "issues": "https://github.com/umollu/status-crops/issues"
+  },
+  "license": "MIT",
+  "icon": "assets/statuscrops/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.umollu.statuscrops.StatusCropsMod"
+    ],
+    "client": [
+      "com.umollu.statuscrops.client.StatusCropsClientMod"
+    ],
+    "modmenu": [
+      "com.umollu.statuscrops.config.StatusCropsMenuIntegration"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.17.x"
+  }
+}

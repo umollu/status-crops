@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "statuscrops:block/statuscrop_stage5"
+  }
+}

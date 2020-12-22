@@ -1,0 +1,9 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "statuscrops:item/empty",
+    "layer1": "statuscrops:item/fruit_base",
+    "layer2": "statuscrops:item/fruit_primary",
+    "layer3": "statuscrops:item/fruit_secondary"
+  }
+}

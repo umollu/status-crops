@@ -1,0 +1,150 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "statuscrops:statuscrop",
+                  "properties": {
+                    "age": "7"
+                  }
+                }
+              ],
+              "name": "statuscrops:fruit",
+              "functions": [
+                {
+                  "function": "minecraft:copy_nbt",
+                  "source": "block_entity",
+                  "ops": [
+                    {
+                      "source": "StatusType",
+                      "target": "StatusType",
+                      "op": "replace"
+                    },
+                    {
+                      "source": "Level",
+                      "target": "Level",
+                      "op": "replace"
+                    },
+                    {
+                      "source": "Duration",
+                      "target": "Duration",
+                      "op": "replace"
+                    },
+                    {
+                      "source": "Balance",
+                      "target": "Balance",
+                      "op": "replace"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "statuscrops:seeds",
+              "functions": [
+                {
+                  "function": "minecraft:copy_nbt",
+                  "source": "block_entity",
+                  "ops": [
+                    {
+                      "source": "StatusType",
+                      "target": "StatusType",
+                      "op": "replace"
+                    },
+                    {
+                      "source": "Level",
+                      "target": "Level",
+                      "op": "replace"
+                    },
+                    {
+                      "source": "Duration",
+                      "target": "Duration",
+                      "op": "replace"
+                    },
+                    {
+                      "source": "Balance",
+                      "target": "Balance",
+                      "op": "replace"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:apply_bonus",
+              "enchantment": "minecraft:fortune",
+              "formula": "minecraft:binomial_with_bonus_count",
+              "parameters": {
+                "extra": 3,
+                "probability": 0.5714286
+              }
+            },
+            {
+              "function": "minecraft:copy_nbt",
+              "source": "block_entity",
+              "ops": [
+                {
+                  "source": "StatusType",
+                  "target": "StatusType",
+                  "op": "replace"
+                },
+                {
+                  "source": "Level",
+                  "target": "Level",
+                  "op": "replace"
+                },
+                {
+                  "source": "Duration",
+                  "target": "Duration",
+                  "op": "replace"
+                },
+                {
+                  "source": "Balance",
+                  "target": "Balance",
+                  "op": "replace"
+                }
+              ]
+            }
+          ],
+          "name": "statuscrops:seeds"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "statuscrops:statuscrop",
+          "properties": {
+            "age": "7"
+          }
+        }
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "function": "minecraft:explosion_decay"
+    }
+  ]
+}
