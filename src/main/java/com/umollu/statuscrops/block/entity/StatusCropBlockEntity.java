@@ -36,12 +36,12 @@ public class StatusCropBlockEntity extends BlockEntity {
         this.balance = balance;
     }
 
-    public StatusCropBlockEntity(BlockEntityType<?> blockEntityType, BlockPos blockPos, BlockState blockState) {
-        super(StatusCropsMod.STATUSCROP_BLOCK_ENTITY, blockPos, blockState);
+    public StatusCropBlockEntity(BlockEntityType<?> blockEntityType) {
+        super(StatusCropsMod.STATUSCROP_BLOCK_ENTITY);
     }
 
-    public StatusCropBlockEntity(BlockPos blockPos, BlockState blockState) {
-        this(StatusCropsMod.STATUSCROP_BLOCK_ENTITY, blockPos, blockState);
+    public StatusCropBlockEntity() {
+        this(StatusCropsMod.STATUSCROP_BLOCK_ENTITY);
     }
 
     public void setRandomStats(Random random) {
@@ -77,12 +77,11 @@ public class StatusCropBlockEntity extends BlockEntity {
     }
 
     @Override
-    public void fromTag(CompoundTag compoundTag) {
-        super.fromTag(compoundTag);
+    public void fromTag(BlockState state, CompoundTag compoundTag) {
+        super.fromTag(state, compoundTag);
         statusType = compoundTag.getInt("StatusType");
         level = compoundTag.getInt("Level");
         duration = compoundTag.getInt("Duration");
         balance = compoundTag.getInt("Balance");
     }
-
 }
