@@ -22,6 +22,10 @@ But not every crops is the same and you can change it!
 * Duration: Max. 5
 * Balance: Max. 10
 
+## Config: Change drop chances
+
+![](config.png)
+
 ## My other mods
 
 [![](https://umollu.com/images/ash-badge.png)](https://github.com/umollu/ash)
