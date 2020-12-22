@@ -32,8 +32,8 @@ public class StatusCropBlock extends CropBlock implements BlockEntityProvider {
     }
 
     @Override
-    public BlockEntity createBlockEntity(BlockView world) {
-        return new StatusCropBlockEntity();
+    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
+        return new StatusCropBlockEntity(pos, state);
     }
 
     @Override
@@ -86,7 +86,7 @@ public class StatusCropBlock extends CropBlock implements BlockEntityProvider {
                 }
 
                 if(validDirections.size() > 0){
-                    Direction randomValidDirection = (Direction) Util.getRandom(validDirections.toArray(), random);
+                    Direction randomValidDirection = (Direction) Util.method_32309(validDirections, random);
                     BlockEntity blockEntity2 = world.getBlockEntity(pos.offset(randomValidDirection));
                     ((StatusCropBlockEntity) blockEntity).crossBreedingStats((StatusCropBlockEntity)blockEntity2, random);
                 }
